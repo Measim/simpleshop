@@ -1,0 +1,16 @@
+<div class="container jumbotron">
+    <div class="row">
+        <div class="col-md-3" ng-repeat="item in items">
+            <div class="thumbnail">
+                <h4 class="item-title">{{item.modelName}}</h4>
+                <img ng-src="{{item.img}}" alt="notePic"/>
+            </div>
+            <div class="item-description">{{item.description}}</div>
+            <h3 class="item-price">{{item.price | currency}}</h3>
+            <div class="btn-add-remove">
+                <input class="btn btn-primary btn-sm" type="button" value="Add to Cart" ng-click="addToCart(item)">
+                <input class="btn btn-primary btn-sm" type="button" value="Remove from Cart" ng-click="removeFromCart(item.id)">
+            </div>
+        </div>
+    </div>
+</div>

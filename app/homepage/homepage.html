@@ -1,0 +1,11 @@
+<div class="container-fluide">
+    <carousel interval="myInterval">
+      <slide ng-repeat="slide in slides" active="slide.active">
+        <img ng-src="{{slide.image}}" style="height: 500px">
+        <div class="carousel-caption carousel-custom">
+          <h2>{{slide.text}}</h2>
+          <p>Updates will come!</p>
+        </div>
+      </slide>
+    </carousel>
+</div>

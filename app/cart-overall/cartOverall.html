@@ -1,0 +1,9 @@
+<h2>Shopping Card</h2>
+<div class="row cart-overall-list" ng-repeat="cart in cartOverall">
+	<div class="col-md-3">{{cart.getDescription()}}</div>
+	<div class="col-md-2">{{cart.getQuantity()}}</div>
+	<div class="col-md-3 item-price">{{cart.getPrice() | currency}}</div>
+	<div class="col-md-2">Total Value: {{cart.getPrice() * cart.getQuantity() | currency}}</div>
+	<input class="col-md-2 btn btn-primary btn-sm" type="button" value="Remove"  ng-click="removeItemsFromCart(cart.getId(id))" />
+</div>
+<div class="item-price">Total: {{totalValue | currency}}</div>

@@ -1,0 +1,39 @@
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#/">ItShop</a>
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#headNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+        </div>
+
+        <div class="nav navbar-collapse collapse" id="headNavbar">
+            <ul class="nav navbar-nav">
+                <li ng-class="{active:activeHomeTab}"><a href="#/">Home</a></li>
+                <li ng-class="{active:activeTabletsTab}"><a href="#/view1">Tablets</a></li>
+                <li ng-class="{active:activeNotebooksTab}"><a href="#/view2">Notebooks</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#/cart-overall" style="padding: 5px 0 0 0; width:150px">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <span class="glyphicon glyphicon-shopping-cart"></span><span class="badge">{{goodsItems.totalCartItems}}</span>
+                            </div>
+                            <div class="col-md-6"> 
+                                <span>{{goodsItems.totalCartValue | currency}} Value</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+  </div>
+</div>
